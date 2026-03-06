@@ -1,63 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Portfólio HTML GitHub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio Profissional</title>
 
-    <style>
-        body {
-            background-color: #000000;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
+<style>
+    body{
+        margin:0;
+        font-family: 'Segoe UI', sans-serif;
+        background:#f4f6fb;
+        color:#333;
+    }
 
-        h1 {
-            color: #000000;
-        }
+    header{
+        background:linear-gradient(120deg,#1f3c88,#39a0ed);
+        color:white;
+        padding:60px 20px;
+        text-align:center;
+    }
 
-        h2 {
-            color: #00BFFF;
-        }
+    header h1{
+        margin:0;
+        font-size:42px;
+    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+    header p{
+        font-size:20px;
+        opacity:0.9;
+    }
 
-        li {
-            background-color: white;
-            margin: 10px auto;
-            padding: 10px;
-            width: 300px;
-            border-radius: 8px;
-        }
+    section{
+        padding:50px 20px;
+        max-width:1000px;
+        margin:auto;
+    }
 
-        .card {
-            background-color: white;
-            width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-        }
-    </style>
+    h2{
+        text-align:center;
+        margin-bottom:30px;
+        color:#1f3c88;
+    }
+
+    .cards{
+        display:flex;
+        flex-wrap:wrap;
+        gap:20px;
+        justify-content:center;
+    }
+
+    .card{
+        background:white;
+        padding:25px;
+        width:280px;
+        border-radius:12px;
+        box-shadow:0 8px 20px rgba(0,0,0,0.08);
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:translateY(-6px);
+    }
+
+    .btn{
+        display:inline-block;
+        margin-top:15px;
+        padding:10px 18px;
+        background:#1f3c88;
+        color:white;
+        border-radius:20px;
+        text-decoration:none;
+        font-size:14px;
+    }
+
+    footer{
+        background:#1f3c88;
+        color:white;
+        text-align:center;
+        padding:20px;
+        margin-top:40px;
+    }
+</style>
 </head>
 
 <body>
 
-    <div class="card">
-        <h1>Erick Daniel</h1>
+<header>
+    <h1>Erick Daniel dos Santos</h1>
+    <p>Desenvolvedor(a) | Aluno de Sistemas | BACK-end</p>
+</header>
 
-        <h2>Objetivo</h2>
-        <p>Aprender e compreender toda a area de progração e continuar com a santidade.</p>
-        
-        <ul>
-            <li>#Fechado computaria</li>
-            <li>#Garoto de programa</li>
-        </ul>
+<section>
+    <h2>Gosto de aprender</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+        Sou aluno de desenvolvimento de sistemas, fisurado por tecnologia,
+        programação e criação de projetos web. Este site reúne meus trabalhos,
+        habilidades e contatos profissionais.
+    </p>
+</section>
 
-        <h2>Contato</h2>
-        <p>Email: erick.daniel.santos@escola.pr.gov.br</p>
+<section>
+    <h2>Projetos</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Projeto 1</h3>
+            <p>Como fazer uma bomba nuclear caseira.</p>
+            <a href="#" class="btn">Ver projeto</a>
+        </div>
+
+        <div class="card">
+            <h3>Projeto 2</h3>
+            <p>Ensino de emplementação de estoicismo</p>
+            <a href="#" class="btn">Ver projeto</a>
+        </div>
+
+        <div class="card">
+            <h3>Projeto 3</h3>
+            <p>Curso Online de como fazer Curso Online.</p>
+            <a href="#" class="btn">Ver projeto</a>
+        </div>
     </div>
+</section>
+
+<section>
+    <h2>(44)999888777</h2>
+    <p style="text-align:center;">
+        📧 erick.daniel.santos@escolapr.gov.br<br>
+        💼 LinkedIn: seu perfil<br>
+        💻 GitHub: erickdanielsantos
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 - Erick Daniel Santos | Portfólio Profissional</p>
+</footer>
 
 </body>
 </html>
