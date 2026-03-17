@@ -3,108 +3,268 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Poppins',sans-serif;background:#0f172a;color:white}
+<title>Erick Daniel dos Santos | Portfólio</title>
 
-header{display:flex;justify-content:space-between;align-items:center;padding:25px 8%;background:#020617}
-nav a{margin-left:20px;text-decoration:none;color:#cbd5f5;font-weight:500}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#020617;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(2,6,23,0.7);
+backdrop-filter:blur(10px);
+z-index:100;
+}
+
+nav h2{
+font-weight:600;
+letter-spacing:1px;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#cbd5f5;
+font-weight:500;
+transition:0.3s;
+}
+
 nav a:hover{color:#38bdf8}
 
-.hero{height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
-.hero h1{font-size:3rem;margin-bottom:10px}
-.hero p{color:#94a3b8;font-size:1.2rem}
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:120px 10%;
+background:linear-gradient(135deg,#020617,#0f172a);
+}
 
-.btn{margin-top:25px;padding:12px 28px;background:#38bdf8;border:none;border-radius:30px;color:#020617;font-weight:600;cursor:pointer}
+.hero-text{max-width:600px}
 
-section{padding:80px 10%}
-section h2{font-size:2rem;margin-bottom:30px;border-left:4px solid #38bdf8;padding-left:10px}
+.hero-text h1{
+font-size:3.8rem;
+margin-bottom:10px;
+background:linear-gradient(90deg,#38bdf8,#a78bfa);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
 
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+.hero-text h2{
+font-weight:400;
+margin-bottom:20px;
+color:#cbd5f5;
+}
 
-.card{background:#1e293b;padding:25px;border-radius:15px;transition:0.3s}
-.card:hover{transform:translateY(-6px);background:#334155}
+.hero-text p{
+color:#94a3b8;
+line-height:1.6;
+margin-bottom:30px;
+}
 
-.card h3{margin-bottom:10px}
-.card p{color:#94a3b8;font-size:0.95rem}
+.hero-buttons a{
+padding:12px 28px;
+border-radius:30px;
+text-decoration:none;
+margin-right:15px;
+font-weight:500;
+}
 
-.skills{display:flex;flex-wrap:wrap;gap:15px}
-.skill{background:#1e293b;padding:10px 18px;border-radius:20px}
+.btn-primary{
+background:#38bdf8;
+color:#020617;
+}
 
-.contact p{margin:8px 0;color:#94a3b8}
+.btn-outline{
+border:1px solid #38bdf8;
+color:#38bdf8;
+}
 
-footer{text-align:center;padding:25px;background:#020617;color:#64748b}
+.hero-img img{
+width:320px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* SECTION */
+section{
+padding:100px 10%;
+max-width:1200px;
+margin:auto;
+}
+
+section h2{
+font-size:2.4rem;
+margin-bottom:40px;
+position:relative;
+}
+
+section h2::after{
+content:"";
+width:60px;
+height:4px;
+background:#38bdf8;
+position:absolute;
+left:0;
+bottom:-10px;
+border-radius:10px;
+}
+
+/* ABOUT */
+#sobre p{
+color:#94a3b8;
+line-height:1.7;
+max-width:750px;
+font-size:1.05rem;
+}
+
+/* SKILLS */
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.skill{
+background:#0f172a;
+padding:18px 25px;
+border-radius:12px;
+display:flex;
+align-items:center;
+gap:10px;
+transition:0.3s;
+border:1px solid transparent;
+}
+
+.skill i{color:#38bdf8;font-size:1.2rem}
+
+.skill:hover{
+border:1px solid #38bdf8;
+transform:translateY(-4px);
+}
+
+/* CONTACT */
+.contact p{
+margin:10px 0;
+color:#94a3b8;
+}
+
+.contact i{
+color:#38bdf8;
+margin-right:10px;
+}
+
+/* FOOTER */
+footer{
+margin-top:80px;
+padding:30px;
+text-align:center;
+background:#020617;
+color:#64748b;
+}
 
 </style>
 </head>
 
 <body>
 
-<header>
-<h2>Erick Daniel dos Santos</h2>
 <nav>
+<h2>Erick Daniel</h2>
+
+<div>
 <a href="#sobre">Sobre</a>
 <a href="#skills">Habilidades</a>
-<a href="#projetos">Projetos</a>
 <a href="#contato">Contato</a>
+</div>
 </nav>
-</header>
 
 <section class="hero">
-<h1>Olá, eu sou Erick</h1>
-<p>Desenvolvedor / Estudante / Criador</p>
-<button class="btn">Ver Projetos</button>
+
+<div class="hero-text" data-aos="fade-right">
+<h1>Erick Daniel dos Santos</h1>
+<h2>Estudante de Programação</h2>
+
+<p>
+Sou estudante e apaixonado por tecnologia e programação. Tenho interesse em desenvolvimento de software e na criação de soluções utilizando código. Gosto de aprender novas tecnologias, desenvolver projetos e melhorar constantemente minhas habilidades como programador.
+
+Atualmente estudo programação e busco evoluir cada vez mais na área de desenvolvimento, explorando linguagens como Python e JavaScript e criando projetos para aplicar na prática o que aprendo.
+</p>
+
+<div class="hero-buttons">
+<a href="#skills" class="btn-primary">Ver habilidades</a>
+<a href="https://github.com/erickdanielsantos" class="btn-outline">Github</a>
+</div>
+
+</div>
+
+<div class="hero-img" data-aos="fade-left">
+<img src="https://picsum.photos/400/400" alt="foto">
+</div>
+
 </section>
 
-<section id="sobre">
+<section id="sobre" data-aos="fade-up">
 <h2>Sobre Mim</h2>
-<p style="color:#94a3b8;max-width:700px">Eu sou estudande de Desenvolvimento de Sistemas, atualmente no 2° ano do ensino médio, busco aprender e se profissionalizar na area de programação, após o termino do ensino médio pretendo fazer faculdade de Engenharia de Software.</p>
+
+<p>
+Meu nome é Erick Daniel dos Santos e sou estudante de programação. Tenho grande interesse em tecnologia e no desenvolvimento de sistemas e aplicações web. Gosto de estudar programação, experimentar novas ferramentas e desenvolver projetos que me ajudem a evoluir como desenvolvedor.
+
+Meu objetivo é continuar aprendendo cada vez mais sobre desenvolvimento de software e construir uma carreira na área de tecnologia.
+</p>
+
 </section>
 
-<section id="skills">
+<section id="skills" data-aos="fade-up">
 <h2>Habilidades</h2>
+
 <div class="skills">
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">JavaScript</div>
-<div class="skill">Git</div>
-<div class="skill">Design</div>
+
+<div class="skill"><i class="fa-brands fa-python"></i>Python</div>
+<div class="skill"><i class="fa-brands fa-js"></i>JavaScript</div>
+<div class="skill"><i class="fa-brands fa-html5"></i>HTML</div>
+<div class="skill"><i class="fa-brands fa-git-alt"></i>Git</div>
+
 </div>
+
 </section>
 
-<section id="projetos">
-<h2>Projetos</h2>
-<div class="cards">
-
-<div class="card">
-<h3>Projeto 1</h3>
-<p>Descrição curta do projeto.</p>
-</div>
-
-<div class="card">
-<h3>Projeto 2</h3>
-<p>Descrição curta do projeto.</p>
-</div>
-
-<div class="card">
-<h3>Projeto 3</h3>
-<p>Descrição curta do projeto.</p>
-</div>
-
-</div>
-</section>
-
-<section id="contato" class="contact">
+<section id="contato" data-aos="fade-up">
 <h2>Contato</h2>
-<p>Email: erick.daniel.santos@escola.pr.gov.br</p>
-<p>GitHub: github.com/erickdanielsantos</p>
+
+<div class="contact">
+<p><i class="fa-solid fa-envelope"></i> erick.daniel.santos@escola.pr.gov.br</p>
+<p><i class="fa-brands fa-github"></i> github.com/erickdanielsantos</p>
+</div>
+
 </section>
 
 <footer>
-<p>© 2026 - Erick Daniel Santos</p>
+<p>© 2026 Erick Daniel dos Santos</p>
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init({duration:1000});
+</script>
 
 </body>
 </html>
