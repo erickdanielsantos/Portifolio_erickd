@@ -1,138 +1,114 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio Profissional</title>
+<title>Meu Portfólio</title>
 
 <style>
-    body{
-        margin:0;
-        font-family: 'Segoe UI', sans-serif;
-        background:#f4f6fb;
-        color:#333;
-    }
+body{
+    font-family: Arial;
+    margin:0;
+    background:#0f172a;
+    color:white;
+}
 
-    header{
-        background:linear-gradient(120deg,#1f3c88,#39a0ed);
-        color:white;
-        padding:60px 20px;
-        text-align:center;
-    }
+header{
+    text-align:center;
+    padding:40px;
+    background:#020617;
+}
 
-    header h1{
-        margin:0;
-        font-size:42px;
-    }
+section{
+    padding:40px;
+    max-width:900px;
+    margin:auto;
+}
 
-    header p{
-        font-size:20px;
-        opacity:0.9;
-    }
+h2{
+    border-bottom:2px solid #38bdf8;
+    padding-bottom:5px;
+}
 
-    section{
-        padding:50px 20px;
-        max-width:1000px;
-        margin:auto;
-    }
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
 
-    h2{
-        text-align:center;
-        margin-bottom:30px;
-        color:#1f3c88;
-    }
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    width:250px;
+}
 
-    .cards{
-        display:flex;
-        flex-wrap:wrap;
-        gap:20px;
-        justify-content:center;
-    }
-
-    .card{
-        background:white;
-        padding:25px;
-        width:280px;
-        border-radius:12px;
-        box-shadow:0 8px 20px rgba(0,0,0,0.08);
-        transition:0.3s;
-    }
-
-    .card:hover{
-        transform:translateY(-6px);
-    }
-
-    .btn{
-        display:inline-block;
-        margin-top:15px;
-        padding:10px 18px;
-        background:#1f3c88;
-        color:white;
-        border-radius:20px;
-        text-decoration:none;
-        font-size:14px;
-    }
-
-    footer{
-        background:#1f3c88;
-        color:white;
-        text-align:center;
-        padding:20px;
-        margin-top:40px;
-    }
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+}
 </style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>Erick Daniel dos Santos</h1>
-    <p>Desenvolvedor(a) | Aluno de Sistemas | BACK-end</p>
+<h1>Seu Nome</h1>
+<p>Seu cargo ou objetivo</p>
 </header>
 
 <section>
-    <h2>Gosto de aprender</h2>
-    <p style="text-align:center; max-width:700px; margin:auto;">
-        Sou aluno de desenvolvimento de sistemas, fisurado por tecnologia,
-        programação e criação de projetos web. Este site reúne meus trabalhos,
-        habilidades e contatos profissionais.
-    </p>
+<h2>Sobre mim</h2>
+<p>
+Escreva aqui um texto sobre você, seus interesses, estudos ou carreira.
+</p>
 </section>
 
 <section>
-    <h2>Projetos</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Projeto 1</h3>
-            <p>Como fazer uma bomba nuclear caseira.</p>
-            <a href="#" class="btn">Ver projeto</a>
-        </div>
+<h2>Tecnologias</h2>
 
-        <div class="card">
-            <h3>Projeto 2</h3>
-            <p>Ensino de emplementação de estoicismo</p>
-            <a href="#" class="btn">Ver projeto</a>
-        </div>
+<div class="cards">
 
-        <div class="card">
-            <h3>Projeto 3</h3>
-            <p>Curso Online de como fazer Curso Online.</p>
-            <a href="#" class="btn">Ver projeto</a>
-        </div>
-    </div>
+<div class="card">HTML</div>
+<div class="card">CSS</div>
+<div class="card">JavaScript</div>
+<div class="card">Git</div>
+
+</div>
 </section>
 
 <section>
-    <h2>(44)999888777</h2>
-    <p style="text-align:center;">
-        📧 erick.daniel.santos@escolapr.gov.br<br>
-        💼 LinkedIn: seu perfil<br>
-        💻 GitHub: erickdanielsantos
-    </p>
+<h2>Projetos</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Projeto 1</h3>
+<p>Descrição do projeto</p>
+</div>
+
+<div class="card">
+<h3>Projeto 2</h3>
+<p>Descrição do projeto</p>
+</div>
+
+<div class="card">
+<h3>Projeto 3</h3>
+<p>Descrição do projeto</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Contato</h2>
+<p>Email: seuemail@email.com</p>
+<p>Github: github.com/seuusuario</p>
 </section>
 
 <footer>
-    <p>© 2026 - Erick Daniel Santos | Portfólio Profissional</p>
+<p>© 2026 - Seu nome</p>
 </footer>
 
 </body>
