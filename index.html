@@ -17,6 +17,34 @@ font-family:'Poppins',sans-serif;
 background:#020617;
 color:white;
 scroll-behavior:smooth;
+overflow-x:hidden;
+}
+
+/* BACKGROUND VISUAL ELEMENTS */
+body::before{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#38bdf8,transparent);
+opacity:0.15;
+top:-200px;
+left:-200px;
+filter:blur(120px);
+z-index:-1;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#8b5cf6,transparent);
+opacity:0.15;
+bottom:-200px;
+right:-200px;
+filter:blur(120px);
+z-index:-1;
 }
 
 /* NAVBAR */
@@ -33,10 +61,7 @@ backdrop-filter:blur(10px);
 z-index:100;
 }
 
-nav h2{
-font-weight:600;
-letter-spacing:1px;
-}
+nav h2{font-weight:600;letter-spacing:1px}
 
 nav a{
 margin-left:25px;
@@ -55,7 +80,6 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:120px 10%;
-background:linear-gradient(135deg,#020617,#0f172a);
 }
 
 .hero-text{max-width:600px}
@@ -88,20 +112,30 @@ margin-right:15px;
 font-weight:500;
 }
 
-.btn-primary{
-background:#38bdf8;
-color:#020617;
+.btn-primary{background:#38bdf8;color:#020617}
+
+.btn-outline{border:1px solid #38bdf8;color:#38bdf8}
+
+/* PROFILE VISUAL */
+.hero-visual{
+width:340px;
+height:340px;
+border-radius:50%;
+background:linear-gradient(135deg,#38bdf8,#8b5cf6);
+padding:5px;
+box-shadow:0 20px 60px rgba(0,0,0,0.7);
 }
 
-.btn-outline{
-border:1px solid #38bdf8;
+.hero-visual-inner{
+background:#020617;
+width:100%;
+height:100%;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:120px;
 color:#38bdf8;
-}
-
-.hero-img img{
-width:320px;
-border-radius:20px;
-box-shadow:0 20px 40px rgba(0,0,0,0.6);
 }
 
 /* SECTION */
@@ -137,40 +171,54 @@ font-size:1.05rem;
 }
 
 /* SKILLS */
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
 }
 
-.skill{
+.skill-card{
 background:#0f172a;
-padding:18px 25px;
-border-radius:12px;
-display:flex;
-align-items:center;
-gap:10px;
+padding:25px;
+border-radius:14px;
 transition:0.3s;
 border:1px solid transparent;
 }
 
-.skill i{color:#38bdf8;font-size:1.2rem}
-
-.skill:hover{
+.skill-card:hover{
 border:1px solid #38bdf8;
-transform:translateY(-4px);
+transform:translateY(-6px);
+}
+
+.skill-card i{
+font-size:28px;
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.skill-bar{
+height:6px;
+background:#1e293b;
+border-radius:10px;
+margin-top:10px;
+overflow:hidden;
+}
+
+.skill-progress{
+height:6px;
+background:#38bdf8;
 }
 
 /* CONTACT */
-.contact p{
-margin:10px 0;
-color:#94a3b8;
+.contact{
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
-.contact i{
-color:#38bdf8;
-margin-right:10px;
-}
+.contact p{color:#94a3b8}
+
+.contact i{color:#38bdf8;margin-right:10px}
 
 /* FOOTER */
 footer{
@@ -188,7 +236,6 @@ color:#64748b;
 
 <nav>
 <h2>Erick Daniel</h2>
-
 <div>
 <a href="#sobre">Sobre</a>
 <a href="#skills">Habilidades</a>
@@ -203,9 +250,7 @@ color:#64748b;
 <h2>Estudante de Programação</h2>
 
 <p>
-Sou estudante e apaixonado por tecnologia e programação. Tenho interesse em desenvolvimento de software e na criação de soluções utilizando código. Gosto de aprender novas tecnologias, desenvolver projetos e melhorar constantemente minhas habilidades como programador.
-
-Atualmente estudo programação e busco evoluir cada vez mais na área de desenvolvimento, explorando linguagens como Python e JavaScript e criando projetos para aplicar na prática o que aprendo.
+Sou estudante e apaixonado por tecnologia e programação. Tenho interesse em desenvolvimento de software e na criação de soluções utilizando código. Gosto de aprender novas tecnologias e desenvolver projetos para evoluir constantemente como programador.
 </p>
 
 <div class="hero-buttons">
@@ -215,8 +260,10 @@ Atualmente estudo programação e busco evoluir cada vez mais na área de desenv
 
 </div>
 
-<div class="hero-img" data-aos="fade-left">
-<img src="https://picsum.photos/400/400" alt="foto">
+<div class="hero-visual" data-aos="fade-left">
+<div class="hero-visual-inner">
+<i class="fa-solid fa-code"></i>
+</div>
 </div>
 
 </section>
@@ -226,7 +273,6 @@ Atualmente estudo programação e busco evoluir cada vez mais na área de desenv
 
 <p>
 Meu nome é Erick Daniel dos Santos e sou estudante de programação. Tenho grande interesse em tecnologia e no desenvolvimento de sistemas e aplicações web. Gosto de estudar programação, experimentar novas ferramentas e desenvolver projetos que me ajudem a evoluir como desenvolvedor.
-
 Meu objetivo é continuar aprendendo cada vez mais sobre desenvolvimento de software e construir uma carreira na área de tecnologia.
 </p>
 
@@ -235,12 +281,31 @@ Meu objetivo é continuar aprendendo cada vez mais sobre desenvolvimento de soft
 <section id="skills" data-aos="fade-up">
 <h2>Habilidades</h2>
 
-<div class="skills">
+<div class="skills-grid">
 
-<div class="skill"><i class="fa-brands fa-python"></i>Python</div>
-<div class="skill"><i class="fa-brands fa-js"></i>JavaScript</div>
-<div class="skill"><i class="fa-brands fa-html5"></i>HTML</div>
-<div class="skill"><i class="fa-brands fa-git-alt"></i>Git</div>
+<div class="skill-card">
+<i class="fa-brands fa-python"></i>
+<h3>Python</h3>
+<div class="skill-bar"><div class="skill-progress" style="width:70%"></div></div>
+</div>
+
+<div class="skill-card">
+<i class="fa-brands fa-js"></i>
+<h3>JavaScript</h3>
+<div class="skill-bar"><div class="skill-progress" style="width:65%"></div></div>
+</div>
+
+<div class="skill-card">
+<i class="fa-brands fa-html5"></i>
+<h3>HTML</h3>
+<div class="skill-bar"><div class="skill-progress" style="width:75%"></div></div>
+</div>
+
+<div class="skill-card">
+<i class="fa-brands fa-git-alt"></i>
+<h3>Git</h3>
+<div class="skill-bar"><div class="skill-progress" style="width:60%"></div></div>
+</div>
 
 </div>
 
@@ -261,7 +326,6 @@ Meu objetivo é continuar aprendendo cada vez mais sobre desenvolvimento de soft
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 <script>
 AOS.init({duration:1000});
 </script>
